@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Surface
+  - Tree
+  - UI
+  - Heart
+  - Coin
   layers:
   - Default
   - TransparentFX
