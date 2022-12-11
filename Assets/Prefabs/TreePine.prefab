@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3021269565228862224}
   - component: {fileID: 2180427476313130165}
   - component: {fileID: 4154175335282618495}
+  - component: {fileID: 7072675335665691437}
   m_Layer: 0
   m_Name: TreePine
   m_TagString: Tree
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7072675335665691437
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496793016540991914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.093496926
+  m_Height: 1.270869
+  m_Direction: 1
+  m_Center: {x: -0.007866949, y: 0.6354345, z: 0.0007851184}

@@ -10,6 +10,7 @@ TagManager:
   - UI
   - Heart
   - Coin
+  - Misc
   layers:
   - Default
   - TransparentFX

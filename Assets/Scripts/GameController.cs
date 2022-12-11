@@ -8,4 +8,5 @@ public class GameController : GameElement
     public GroundController ground;
     public ItemController item;
     public UIController ui;
+    public AudioManager audio;
 }

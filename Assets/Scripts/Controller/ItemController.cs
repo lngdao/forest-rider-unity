@@ -13,6 +13,7 @@ public class ItemController : GameElement
         string tag = gameObject.tag;
         Destroy(gameObject);
 
+        Game.controller.audio.PlayAudio("Item");
         if (tag == "Heart")
         {
             Game.controller.ui.HandleAddHeathPlayer();

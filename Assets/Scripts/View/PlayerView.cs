@@ -28,6 +28,9 @@ public class PlayerView : GameElement
         if (collision.gameObject.tag == "Heart" || collision.gameObject.tag == "Coin")
         {
             Game.controller.item.HandleOnPlayerEnter(collision.gameObject);
+        } else if (collision.gameObject.tag == "Tree")
+        {
+            Game.controller.ui.HandleLoseGame();
         }
     }
 

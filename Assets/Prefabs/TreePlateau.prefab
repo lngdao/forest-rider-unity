@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6887469529536882968}
   - component: {fileID: 7510577695048099517}
   - component: {fileID: 5755065785458397815}
+  - component: {fileID: 7072843098749872670}
   m_Layer: 0
   m_Name: TreePlateau
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7072843098749872670
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115577850242216866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.08684772
+  m_Height: 1.2156829
+  m_Direction: 1
+  m_Center: {x: 0.009093118, y: 0.5944688, z: -0.0019750118}

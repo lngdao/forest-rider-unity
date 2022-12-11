@@ -8,7 +8,21 @@ public class UIController : GameElement
     private float _timeGame = 0;
     private int _scoreGame = 0;
     private int _heart = 3;
-    private float _heartInterval = 10;
+    private float _heartInterval = 30;
+    private GameObject UIText;
+    private GameObject UIButtonStart;
+    private GameObject UIButtonPause;
+    private GameObject UIButtonLose;
+
+    public void InitUIComponent(GameObject UIText, GameObject UIButtonStart, GameObject UIButtonPause, GameObject UIButtonLose)
+    {
+        this.UIText = UIText;
+        this.UIButtonStart = UIButtonStart;
+        this.UIButtonPause = UIButtonPause;
+        this.UIButtonLose = UIButtonLose;
+        UIText.SetActive(false);
+        UIButtonPause.SetActive(false);
+    }
 
     public void HandleUpdateTimeGame(TMPro.TextMeshProUGUI timeUI)
     {
@@ -44,7 +58,7 @@ public class UIController : GameElement
         {
             _heart = 3;
             return;
-        } 
+        }
         _heart += 1;
         _heartInterval = 15;
     }
@@ -83,5 +97,49 @@ public class UIController : GameElement
             _heart -= 1;
             _heartInterval = 5;
         }
+    }
+
+    public void HandleExitGame()
+    {
+        #if UNITY_STANDALONE
+                Application.Quit();
+        #endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
+    public void HandleStartGame()
+    {
+        UIText.SetActive(true);
+        UIButtonStart.SetActive(false);
+        Time.timeScale = 1;
+        Game.controller.player.StartPlayer();
+    }
+
+    public void HandlePauseGame()
+    {
+        Time.timeScale = 0;
+        UIButtonPause.SetActive(true);
+        Game.controller.player.StopPlayer();
+        //UIButton.transform.GetChild()
+    }
+
+    public void HandleResumeGame()
+    {
+        Time.timeScale = 1;
+        UIButtonPause.SetActive(false);
+    }
+
+    public void HandleRestartGame()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void HandleLoseGame()
+    {
+        Time.timeScale = 0;
+        UIText.transform.GetChild(3).gameObject.SetActive(false);
+        UIButtonLose.SetActive(true);
     }
 }
